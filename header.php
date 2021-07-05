@@ -18,6 +18,12 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<?php wp_head(); ?>
+<title><?php
+if (is_home()) {
+	wp_title('Best Title Ever');
+
+	}
+?></title>
 </head>
 
 <body <?php body_class(); ?>>

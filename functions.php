@@ -14,6 +14,16 @@ if ( version_compare( $GLOBALS['wp_version'], '5.3', '<' ) ) {
 	require get_template_directory() . '/inc/back-compat.php';
 }
 
+add_filter( 'wp_change_title', 'change_wp_title' );
+
+function change_wp_title( $title )
+{
+if ( empty( $title ) && ( is_home() || is_front_page() ) ) {    
+$title = __( 'Ako ne podadesh title na function-a shte se sloji tozi' );
+  }
+  return $title; 
+}
+
 if ( ! function_exists( 'twenty_twenty_one_setup' ) ) {
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
