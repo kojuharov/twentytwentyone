@@ -14,6 +14,23 @@ if ( version_compare( $GLOBALS['wp_version'], '5.3', '<' ) ) {
 	require get_template_directory() . '/inc/back-compat.php';
 }
 
+function add_custom_post_training() {
+array(
+            'labels'      => array(
+                'name'          => __('StanimirNqqGoVidi'),
+                'singular_name' => __('StanimirNqqGoVidi'),
+            ),
+                'public'      => true,
+                'has_archive' => true,
+		'rewrite' => array('slug' => 'stanimir-nqq-go-vidi'),
+        )
+    );
+}
+
+add_action( 'init', 'add_custom_post_training' );
+
+
+
 if ( ! function_exists( 'twenty_twenty_one_setup' ) ) {
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
