@@ -15,8 +15,12 @@
 			</main><!-- #main -->
 		</section><!-- #primary -->
 	</div><!-- #content -->
-
-	<?php get_template_part( 'template-parts/footer/footer-widgets' ); ?>
+<?php
+if ( !is_front_page() && is_home() ) {
+  echo "<p>Some random text that will appear on the blog page, in the footer.</p>";
+}	
+?>
+<?php get_template_part( 'template-parts/footer/footer-widgets' ); ?>
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 
