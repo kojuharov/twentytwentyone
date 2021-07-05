@@ -15,7 +15,8 @@ if ( version_compare( $GLOBALS['wp_version'], '5.3', '<' ) ) {
 }
 
 function add_custom_post_training() {
-array(
+register_post_type( 'StanirmiGoVidqDea',
+	array(
             'labels'      => array(
                 'name'          => __('StanimirNqqGoVidi'),
                 'singular_name' => __('StanimirNqqGoVidi'),
