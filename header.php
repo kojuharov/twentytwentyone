@@ -23,7 +23,7 @@
 <body <?php body_class(); ?>>
 <?php
 if( is_category() ){
-	echo "<p>We are now in a category page</p>";
+	echo "<p>Some random text that will appear only on the category page</p>";
 }
 ?>
 <?php wp_body_open(); ?>
