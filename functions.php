@@ -14,7 +14,7 @@ if ( version_compare( $GLOBALS['wp_version'], '5.3', '<' ) ) {
 	require get_template_directory() . '/inc/back-compat.php';
 }
 
-add_filter( 'wp_change_title', 'change_wp_title' );
+add_filter( 'wp_title', 'change_wp_title' );
 
 function change_wp_title( $title )
 {
