@@ -22,7 +22,7 @@
 
 <body <?php body_class(); ?>>
 if ( is_singluar() ) {
-echo "This random text should appear on every POST page";
+echo "<p>This random text should appear on every POST page</p>";
 }
 <?php wp_body_open(); ?>
 <div id="page" class="site">
